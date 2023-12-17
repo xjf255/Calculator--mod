@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo para Input Radio</title>
+  <style>
+    /* Estilo personalizado para el input radio */
+    body{
+        display: flex;
+        gap: 10px;
+    }
+    .custom-radio input {
+      /* Oculta el input nativo */
+      display: none;
+    }
+
+    .custom-radio label {
+      /* Estilo básico del contenedor del radio */
+      width: 8px;
+      height: 8px;
+      display: block;
+      /* padding: 8px 16px; */
+      border: 2px solid #3498db;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Estilo cuando el input está marcado */
+    .custom-radio input:checked + label {
+      background-color: #3498db;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-radio">
+    <input type="radio" id="radio1" name="radioGroup">
+    <label for="radio1"></label>
+  </div>
+
+  <div class="custom-radio">
+    <input type="radio" id="radio2" name="radioGroup">
+    <label for="radio2"></label>
+  </div>
+
+  <div class="custom-radio">
+    <input type="radio" id="radio3" name="radioGroup">
+    <label for="radio3"></label>
+  </div>
+</body>
+</html>

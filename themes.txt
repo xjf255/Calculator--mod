@@ -1,0 +1,28 @@
+    /*theme 2*/
+    --theme2-main-background: hsl(0, 0%, 90%);
+    --theme2-Grayish-red-toggle-keypad-background: hsl(0, 5%, 81%);
+    --theme2-Very-light-gray-screen-background: hsl(0, 0%, 93%);
+    /* Keys */
+    --theme2-Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+    --theme2-Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+    --theme2-Orange-key-background-toggle: hsl(25, 98%, 40%);
+    --theme2-Dark-orange-key-shadow: hsl(25, 99%, 27%);
+    --theme2-Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+    --theme2-Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+    /* Text */
+    --theme2-Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    /*theme 3*/
+    --theme3-Very-dark-violet-main: hsl(268, 75%, 9%);
+    --theme3-Very-dark-violet-toggle-keypad: hsl(268, 71%, 12%);
+    /* Keys */
+    --theme3-Dark-violet-key-background: hsl(281, 89%, 26%);
+    --theme3-Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+    --theme3-Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+    --theme3-Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+
+    --theme3-Very-dark-violet-key-background: hsl(268, 47%, 21%);
+    --theme3-Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+    /* Text */
+    --theme3-Light-yellow: hsl(52, 100%, 62%);
+    --theme3-Very-dark-blue: hsl(198, 20%, 13%);

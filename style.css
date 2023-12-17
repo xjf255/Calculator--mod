@@ -1,0 +1,339 @@
+:root {
+    /*theme 1*/
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    /* Keys */
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --Red: hsl(6, 63%, 50%);
+    --Dark-red: hsl(6, 70%, 34%);
+    --Light-grayish-orange: hsl(30, 25%, 89%);
+    --Grayish-orange: hsl(28, 16%, 65%);
+    /* Text */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+    /*theme 2*/
+    --theme2-main-background: hsl(0, 0%, 90%);
+    --theme2-Grayish-red-toggle-keypad-background: hsl(0, 5%, 81%);
+    --theme2-Very-light-gray-screen-background: hsl(0, 0%, 93%);
+    /* Keys */
+    --theme2-Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+    --theme2-Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+    --theme2-Orange-key-background-toggle: hsl(25, 98%, 40%);
+    --theme2-Dark-orange-key-shadow: hsl(25, 99%, 27%);
+    --theme2-Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+    --theme2-Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+    /* Text */
+    --theme2-Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    /*theme 3*/
+    --theme3-Very-dark-violet-main: hsl(268, 75%, 9%);
+    --theme3-Very-dark-violet-toggle-keypad: hsl(268, 71%, 12%);
+    /* Keys */
+    --theme3-Dark-violet-key-background: hsl(281, 89%, 26%);
+    --theme3-Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+    --theme3-Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+    --theme3-Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+
+    --theme3-Very-dark-violet-key-background: hsl(268, 47%, 21%);
+    --theme3-Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+    /* Text */
+    --theme3-Light-yellow: hsl(52, 100%, 62%);
+    --theme3-Very-dark-blue: hsl(198, 20%, 13%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    transition: background-color 0.6s ease;
+}
+
+body {
+    width: 100vw;
+    min-width: 360px;
+    height: 100vh;
+    background-color: var(--main-background);
+    color: var(--White);
+    padding: 30px;
+}
+
+body.light {
+    background-color: var(--theme2-main-background);
+    color: var(--theme2-Very-dark-grayish-yellow);
+}
+
+body.neon {
+    background-color: var(--theme3-Very-dark-violet-main);
+    color: var(--theme3-Light-yellow);
+}
+
+.calculator {
+    width: 100%;
+    height: 100%;
+}
+
+.themes {
+    width: 50%;
+    height: fit-content;
+    font-size: 12px;
+    letter-spacing: 1px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme__title {
+    margin: 15px 0 0 0;
+}
+
+.theme__values{
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.theme__toogle{
+    height: 30px;
+    background-color: var(--toggle-keypad-background);
+    border-radius: 20px;
+}
+
+.light *.theme__toogle{
+    background-color: var(--theme2-Grayish-red-toggle-keypad-background);
+}
+
+.neon *.theme__toogle{
+    background-color: var(--theme3-Very-dark-violet-toggle-keypad);
+}
+
+input {
+    display: none;
+}
+
+.label--change {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+input.input--change:checked+.label--change {
+    opacity: 1;
+}
+
+.default--change{
+    background-color: var(--Red);
+}
+
+.light--change{
+    background-color: var(--theme2-Orange-key-background-toggle);
+}
+
+.neon--change{
+    background-color: var(--theme3-Pure-cyan-key-background-toggle);
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.screen {
+    width: 100%;
+    height: 100px;
+    background-color: var(--screen-background);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.light *.screen {
+    background-color: var(--theme2-Very-light-gray-screen-background);
+}
+
+.neon *.screen {
+    background-color: var(--theme3-Very-dark-violet-toggle-keypad);
+}
+
+.screen__result {
+    width: 100%;
+    text-align: right;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.pad{
+    height: 60%;
+    background-color: var(--toggle-keypad-background);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.light *.pad {
+    background-color: var(--theme2-Grayish-red-toggle-keypad-background);
+}
+
+.neon *.pad {
+    background-color: var(--theme3-Very-dark-violet-toggle-keypad);
+}
+
+.pad > table {
+    width: 100%;
+    height: 100%;
+}
+
+tbody {
+    width: 100%;
+    height: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+tr {
+    display: grid;
+    /* grid-template-columns: max-content(200px); */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.number,
+.special,
+.operators {
+    height: 100%;
+    font-size: 2rem;
+    background-color: var(--Light-grayish-orange);
+    color: var(--Very-dark-grayish-blue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    box-shadow: 0px 4px 0px 0px var(--Grayish-orange);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--Grayish-orange);
+    -moz-box-shadow: 0px 4px 0px 0px var(--Grayish-orange);
+}
+
+.light *.number,
+.light *.operators{
+    background-color: var(--theme2-Light-grayish-yellow-key-background);
+    box-shadow: 0px 4px 0px 0px var(--theme2-Dark-grayish-orange-key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--theme2-Dark-grayish-orange-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--theme2-Dark-grayish-orange-key-shadow);
+}
+
+.neon *.number,
+.neon *.operators {
+    background-color: var(--theme3-Very-dark-violet-key-background);
+    color: var(--theme3-Light-yellow);
+    box-shadow: 0px 4px 0px 0px var(--theme3-Dark-magenta-key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--theme3-Dark-magenta-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--theme3-Dark-magenta-key-shadow);
+}
+
+.pad__footer {
+    display: grid;
+    grid-column: span 2;
+}
+
+.special {
+    font-size: 1.2rem;
+    color: var(--White);
+    background-color: var(--key-background);
+    box-shadow: 0px 4px 0px 0px var(--key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--key-shadow);
+}
+
+.light *.special {
+    background-color: var(--theme2-Dark-moderate-cyan-key-background);
+    box-shadow: 0px 4px 0px 0px var(--theme2-Very-dark-cyan-key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--theme2-Very-dark-cyan-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--theme2-Very-dark-cyan-key-shadow);
+}
+
+.neon *.special{
+    background-color: var(--theme3-Dark-violet-key-background);
+    box-shadow: 0px 4px 0px 0px var(--theme3-Vivid-magenta-key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--theme3-Vivid-magenta-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--theme3-Vivid-magenta-key-shadow);
+}
+
+.equal {
+    background-color: var(--Red);
+    box-shadow: 0px 4px 0px 0px var(--Dark-red);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--Dark-red);
+    -moz-box-shadow: 0px 4px 0px 0px var(--Dark-red);
+}
+
+.light *.equal {
+    background-color: var(--theme2-Orange-key-background-toggle);
+    box-shadow: 0px 4px 0px 0px var(--theme2-Dark-orange-key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--theme2-Dark-orange-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--theme2-Dark-orange-key-shadow);
+}
+
+.neon *.equal {
+    background-color: var(--theme3-Pure-cyan-key-background-toggle);
+    color: var(--theme3-Very-dark-blue);
+    box-shadow: 0px 4px 0px 0px var(--theme3-Soft-cyan-key-shadow);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--theme3-Soft-cyan-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--theme3-Soft-cyan-key-shadow);
+}
+
+@media (width >=1440px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        margin-bottom: 20px;
+    }
+    .calculator {
+        width: 40vw;
+        height: auto;
+    }
+
+    .screen {
+        padding: 60px 30px;
+    }
+
+    .screen__result {
+        font-size: 4rem;
+    }
+
+    .number,
+    .operators {
+        font-size: 3rem;
+    }
+
+    .special{
+        font-size: 2rem;
+    }
+    tbody{
+        gap: 25px;
+    }
+    tr{
+        gap: 30px;
+    }
+}

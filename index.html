@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Frontend Mentor | Calculator app</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body theme>
+  <div class="calculator">
+    <header>
+      <h2 class="title">calc</h2>
+      <section class="themes">
+        <p class="theme__title">THEME</p>
+        <span class="section__theme">
+          <div class="theme__values">
+            <span class="theme__value">1</span>
+            <span class="theme__value">2</span>
+            <span class="theme__value">3</span>
+          </div>
+          <div class="theme__values theme__toogle">
+            <input type="radio" name="mode" id="theme--default" class="input--change" checked>
+            <label for="theme--default" class="label--change default--change"></label>
+            <input type="radio" name="mode" id="theme--light" class="input--change">
+            <label for="theme--light" class="label--change light--change"></label>
+            <input type="radio" name="mode" id="theme--neon" class="input--change">
+            <label for="theme--neon" class="label--change neon--change"></label>
+            <!-- <input type="range" name="" id="" max="2"> -->
+          </div>
+        </span>
+      </section>
+    </header>
+    <div class="screen">
+      <span class="screen__result">0</span>
+    </div>
+    <section class="pad">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <div class="number">7</div>
+            </td>
+            <td>
+              <div class="number">8</div>
+            </td>
+            <td>
+              <div class="number">9</div>
+            </td>
+            <td>
+              <div class="special" id="del">DEL</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="number">4</div>
+            </td>
+            <td>
+              <div class="number">5</div>
+            </td>
+            <td>
+              <div class="number">6</div>
+            </td>
+            <td>
+              <div class="operators" data-sign="+">+</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="number">1</div>
+            </td>
+            <td>
+              <div class="number">2</div>
+            </td>
+            <td>
+              <div class="number">3</div>
+            </td>
+            <td>
+              <div class="operators" data-sign="-">-</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="number">.</div>
+            </td>
+            <td>
+              <div class="number">0</div>
+            </td>
+            <td>
+              <div class="operators" data-sign="/">/</div>
+            </td>
+            <td>
+              <div class="operators" data-sign="*">x</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="pad__footer">
+              <div class="special" id="reset">RESET</div>
+            </td>
+            <td class="pad__footer">
+              <div class="special equal" id="equal"> =</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
